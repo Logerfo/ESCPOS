@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <LangVersion>8.0</LangVersion>
     <Authors>Igor Campos</Authors>
     <Description>A .NET Standard 2.0 ESC/POS Printer Commands Helper</Description>
     <PackageProjectUrl>https://github.com/igorocampos/ESCPOS</PackageProjectUrl>
@@ -13,17 +15,13 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
     <Version>1.1.0</Version>
+    <PackageIcon>ESC_POS.png</PackageIcon>
     <PackageIconUrl>http://campos.cf/ESC_POS.png</PackageIconUrl>
     <PackageTags>escpos;esc;pos;receipt;thermal;printer;esc/pos;sat;cfe</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="UnitTest\**" />
-    <EmbeddedResource Remove="UnitTest\**" />
-    <None Remove="UnitTest\**" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="../ESC_POS.png" Pack="true" PackagePath="\"/>
     <None Include="LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
